@@ -1,0 +1,86 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+:root{
+    --var1 : #212922;
+    --var2 : #5B8266;
+    --var3 : #3E6259;
+    --var4 : #AEF6C7;
+    --var5 : #294936;
+    --var6 : #FFFFFF;
+}
+
+body{
+    background-color: var(--var1);
+    color: var(--var6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    font-size: 35px;
+    width: 99%;
+}
+.logo {
+    width: 300px;
+    
+}
+.bibli{
+    margin-top: 25px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.window {
+    width: 70%;
+    height: 500px;
+    background-color: #294936;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.corps{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    width: 75%;
+}
+::placeholder {
+    color: var(--var6);
+    font-size: 1.5em;
+    padding-left: 20px;
+  }
+
+#transform{
+    width: 41%;
+    height: 50px;
+    border-radius: 25px;
+    background-color:var(--var2);
+    color : var(--var6);
+    border: #AEF6C7 solid 2px;
+}
+
+button{
+    width: 20%;
+    height: 50px;
+    border-radius: 25px;
+    background-color:var(--var3);
+    color : var(--var6);
+    border: #AEF6C7 solid 2px;
+    font-size: 1.5em;
+    
+}
