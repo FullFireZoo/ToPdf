@@ -134,4 +134,22 @@ async function getToken(token){
   
 
 }
-module.exports = { getAllData ,getOneData ,  setData, updateData, deleteData, getToken};
+
+async function getDataWithQuery(collection, arg, query ){
+  const refColletion = db.collection(collection);
+  const snapshot = await refColletion.where(arg, '==', query).get();
+  const data = [];
+  snapshot.forEach((doc) => {
+    const obj = {
+      id: doc.id,
+      data: doc.data(),
+    };
+    data.push(obj);
+  });
+
+  return data
+}
+
+
+
+module.exports = { getAllData ,getOneData ,  setData, updateData, deleteData, getToken, getDataWithQuery};

@@ -1,0 +1,20 @@
+node_modules
+fire.json
+# ajouter une clé d'auth, depuis le projet sur firebase 
+.env
+
+# s'occuper du token pour l'identification administrateur,
+# sur le dossier middlewares => fichier isUser.js
+
+
+# si tu cherches le port vas voir le server.js
+
+#------------------------------------------------------------------------------------------------
+
+# étape 1 : dans le terminal => npm i 
+# étape 2 : dans firebase => creer un new project, puis télécharger la clé d'auth à copier coller dans 
+#           fire.json
+# étape 3 : dans le terminal => npm run dev 
+# ----------------------------------------------------------------
+# L'API est pretes à être utilisé, il ne reste plus qu'à mettre le lien dans postman 
+# http://localhost:3000/api/v1/ + la route choisi pour le post dans l'api.

@@ -1,12 +1,24 @@
 const express = require("express");
-const {getAllData, getOneData, setData, deleteData, updateData} = require("../firebase");
+const {getAllData, getOneData, setData, deleteData, updateData, getDataWithQuery} = require("../firebase");
 const {isUser} = require("../middlewares/isUser")
 const api = express.Router();
+
+
 // get ALL data
 api.get("/:collection", async (req, res) => {
   const response = await getAllData(req.params.collection);
   res.json(response);
 });
+
+
+
+//get data with query parameters
+api.get("/:collection/:arg/:query", async (req, res) => {
+  const response = await getDataWithQuery(req.params.collection, req.params.arg, req.params.query);
+  res.json(response);
+});
+
+
 
 // get one document from collection
 

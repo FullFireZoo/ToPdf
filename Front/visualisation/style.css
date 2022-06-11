@@ -43,8 +43,8 @@ a{
 }
 
 .window {
-    width: 70%;
-    height: 500px;
+    width: 90%;
+    height: 700px;
     background-color: #294936;
     border-radius: 25px;
     display: flex;
@@ -74,7 +74,7 @@ a{
     border: #AEF6C7 solid 2px;
 }
 
-button{
+.btn{
     width: 20%;
     height: 50px;
     border-radius: 25px;
@@ -83,4 +83,14 @@ button{
     border: #AEF6C7 solid 2px;
     font-size: 1.5em;
     
+}
+
+
+#canvas_container {
+    width: 800px;
+    height: 400px;
+    overflow: auto;
+    background: #333;
+    text-align: center;
+    border: solid 3px;
 }
