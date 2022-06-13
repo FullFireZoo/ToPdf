@@ -18,3 +18,18 @@ export function gf(url,callback,options = {}) {
         );
 
 }
+
+export function gfj(url,callback,options = {}) {
+    
+    fetch(url, options)
+        .then(response => response.json())
+        .then(data => {
+            callback(data);
+        }
+        ).catch(error => {
+         
+            throw error;
+        }
+        );
+
+}
