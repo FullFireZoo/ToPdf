@@ -15,8 +15,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
+
+
 export function createUser(email, password, url) {
-createUserWithEmailAndPassword(auth, email, password)
+  const regex = /^[^\W][a-zA-Z0-9\-\._]+[^\W]@[^\W][a-zA-Z0-9\-\._]+[^\W]\.[a-zA-Z]{2,6}$/;
+  if(regex.test(email) && password!==""){
+  createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
@@ -29,6 +33,8 @@ createUserWithEmailAndPassword(auth, email, password)
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log("error");
-    // ..
-  })};
+    
+  })
+}else{alert("Error chakal!")}
+};
 

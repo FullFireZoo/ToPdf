@@ -9,14 +9,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-storage.js";
 import {firebaseConfig} from "./key.js"
 
-// const firebaseConfig = {apiKey: "AIzaSyBunLGwignPVcK5jOvJ1K1NuRhKIwVjja8",
-// authDomain: "topdf-20df2.firebaseapp.com",
-//   databaseURL:
-//     "https://topdf-20df2-default-rtdb.europe-west1.firebasedatabase.app",
-//   projectId: "topdf-20df2",
-//   storageBucket: "topdf-20df2.appspot.com",
-//   messagingSenderId: "870449331312",
-//   appId: "1:870449331312:web:372213461b9e0d448a48b5",};
 
 const link = document.getElementById("link");
 const app = initializeApp(firebaseConfig);
@@ -75,7 +67,7 @@ function test(pdf) {
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "title": schnizel,
+  "title": schnizel.toString(),
   "url": downloadURL,
   "uid": localStorage.getItem("uid"),
 });

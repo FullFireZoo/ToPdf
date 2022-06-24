@@ -56,4 +56,18 @@ img{
     width: 80px;
 }
 
+input {
+    width: 698px; 
+    margin-top: 2em;
+    padding: 20px;
+    background-color: #E5E5E5;
+    border: 1px solid #C4C4C4;
+}
+.searchBar{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
