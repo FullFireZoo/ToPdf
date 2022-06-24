@@ -87,3 +87,14 @@ button{
     margin-top: 15px;
     margin-left: 315px;
 }
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--var6);
+    margin-top: 15px;
+}
+
+a{
+    color: var(--var6)
+}
