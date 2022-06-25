@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
 
 const firebaseConfig = {
@@ -39,4 +39,13 @@ signInWithEmailAndPassword(auth, email, password)
     console.log("error");
   })};
 
+export function deconnexion(url) {
+    signOut(auth)
+      .then(() => {
+        document.location.href = url
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  }
 

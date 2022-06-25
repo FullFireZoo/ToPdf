@@ -1,5 +1,6 @@
 import { gfj } from "../utilitaire/fetch.js";
 import { doc, deleteDoc } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js";
+import {deconnexion} from "../connexion/firebase/firebase.js"
 let dataB = []
 
 
@@ -16,7 +17,6 @@ function callPdf(data){
                 <div class="icon">
                     <img src="./image/téléchargement.png" alt="save" class="save" data-id="${data[i].id}">
                     <a href="${data[i].data.url}" target="_blank"><img src="./image/vue.png" alt="vue"></a>
-                    <a href="${data[i].data.url}" download="test.pdf"><img src="./image/dwn.png" alt="dwn"></a>
                     <img src="./image/dlt.png" alt="dlt" class="delete" data-id="${data[i].id}">
                 </div>
         </li>`}
@@ -77,4 +77,8 @@ const filter = dataB.filter((doc) =>{
 
 console.log(filter);
 callPdf(filter)
+})
+
+document.querySelector("button").addEventListener('click',()=>{
+  deconnexion("../Accueil/accueil.html")
 })
