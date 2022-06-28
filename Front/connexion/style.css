@@ -78,3 +78,46 @@ a{
     color: var(--var6)
 }
  
+@media all and (max-width: 800px){
+.logo{
+    width: 60%;
+    margin-left: 20%;
+}
+}
+
+@media all and (max-width: 700px){
+    .logo{
+        width: 40%;
+        margin-left: 30%;
+    }
+    #email{
+        height: 40px;
+        width: 30%;
+    }
+    #password{
+        height: 40px;
+        width: 30%;
+    }
+    button{
+        height: 40px;
+        width: 30%;
+    }
+    }
+@media all and (max-width: 380px){
+        .logo{
+            width: 65%;
+            margin-left: 20%;
+        }
+        #email{
+            height: 30px;
+            width: 50%;
+        }
+        #password{
+            height: 30px;
+            width: 50%;
+        }
+        button{
+            height: 35px;
+            width: 50%;
+        }
+}

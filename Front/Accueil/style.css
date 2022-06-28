@@ -64,6 +64,9 @@ h2{
     text-align:center;
     font-size: 45px;
 }
+.secondaire{
+  display: none;
+}
 
 /* -----------------ARROW----------------- */
 .arrow:before{
@@ -241,3 +244,36 @@ footer a{
       opacity: 0;
     }
   }
+
+
+  @media all and (max-width: 1000px){
+    h2{ 
+      width: 80%;
+    }
+    }
+
+    @media all and (max-width: 920px){
+      .article{
+        flex-direction: column;}
+      .stop{width: 120px}
+      .merci{width: 130px}
+      .tel{width: 130px}
+      }
+@media all and (max-width: 500px){
+  .article{
+    width: 80%;
+  }
+  footer{
+    height: 230px;
+  }
+  .logo{
+    width:200px;
+  }
+  span{display: none;}
+  button{width:80px;}
+  .principale{display: none;}
+  .secondaire{display: flex;
+    text-align:center;
+    font-size: 45px;
+  margin-left: 18%;}
+}

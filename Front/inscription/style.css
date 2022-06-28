@@ -98,3 +98,66 @@ p{
 a{
     color: var(--var6)
 }
+
+@media all and (max-width: 800px){
+    #password{
+        margin-left:17%;
+    }
+    #subscribe{
+        margin-right: 17%;
+    }
+  }
+
+@media all and (max-width: 720px){
+    .identite{
+        flex-direction: column;
+
+    }
+    .name{
+        width: 300px;
+    }
+    #password{
+        margin-left: 43%;
+        width : 300px
+    }
+    #email{
+        width:300px;
+    }
+    #subscribe{
+        width : 300px;
+        margin-right: 43%;
+    }
+  }
+
+  @media all and (max-width: 480px){
+   
+    #password{
+        margin-left: 63%;
+       
+    }
+   
+    #subscribe{
+       
+        margin-right: 63%;
+    }
+  }
+
+  @media all and (max-width: 390px){
+    .name{
+        width: 200px;
+    }
+    #password{
+        margin-left: 84%;
+        width : 200px
+    }
+    #email{
+        width:200px;
+    }
+    #subscribe{
+        width : 200px;
+        margin-right: 84%;
+    }
+    .logo{
+        width: 200px;
+    }
+  }

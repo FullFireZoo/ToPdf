@@ -15,9 +15,9 @@ function callPdf(data){
         `<li>
             <h3 contenteditable="true" class="nom">${data[i].data.title}</h3>
                 <div class="icon">
-                    <img src="./image/téléchargement.png" alt="save" class="save" data-id="${data[i].id}">
-                    <a href="${data[i].data.url}" target="_blank"><img src="./image/vue.png" alt="vue"></a>
-                    <img src="./image/dlt.png" alt="dlt" class="delete" data-id="${data[i].id}">
+                    <img src="./image/téléchargement.png" alt="save" class="save image" data-id="${data[i].id}">
+                    <a href="${data[i].data.url}" target="_blank"><img src="./image/vue.png" alt="vue" class="image"></a>
+                    <img src="./image/dlt.png" alt="dlt" class="delete image" data-id="${data[i].id}">
                 </div>
         </li>`}
     }

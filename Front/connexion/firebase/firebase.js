@@ -39,6 +39,11 @@ signInWithEmailAndPassword(auth, email, password)
     console.log("error");
   })};
 
+  
+/**
+ * It signs out the user and redirects to the url passed as a parameter
+ * @param url - The URL to redirect to after the user has signed out.
+ */
 export function deconnexion(url) {
     signOut(auth)
       .then(() => {

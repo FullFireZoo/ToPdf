@@ -111,3 +111,18 @@ span:nth-child(2){
 .off{
   display: none;
 }
+
+@media all and (max-width: 700px){
+  .bibli{
+    margin-right: 10%;
+}
+.logo{
+  width: 70%;
+}
+.corps{
+  flex-direction: column;
+}
+button{
+  width:70px;
+}
+}

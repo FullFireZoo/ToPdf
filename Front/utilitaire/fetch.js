@@ -19,6 +19,12 @@ export function gf(url,callback,options = {}) {
 
 }
 
+/**
+ * It fetches a JSON file from a URL and returns the data to a callback function.
+ * @param url - The url to fetch
+ * @param callback - The function that will be called when the data is returned.
+ * @param [options] - 
+ */
 export function gfj(url,callback,options = {}) {
     
     fetch(url, options)
