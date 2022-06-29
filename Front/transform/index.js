@@ -74,7 +74,7 @@ var raw = JSON.stringify({
 
 var requestOptions = {
   method: 'POST',
-  headers: myHeaders,
+  headers:  {myHeaders , Authorization:`${localStorage.getItem("token")}`},
   body: raw,
   redirect: 'follow'
 };

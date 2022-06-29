@@ -15,9 +15,9 @@ function callPdf(data){
         `<li>
             <h3 contenteditable="true" class="nom">${data[i].data.title}</h3>
                 <div class="icon">
-                    <img src="./image/téléchargement.png" alt="save" class="save image" data-id="${data[i].id}">
-                    <a href="${data[i].data.url}" target="_blank"><img src="./image/vue.png" alt="vue" class="image"></a>
-                    <img src="./image/dlt.png" alt="dlt" class="delete image" data-id="${data[i].id}">
+                    <img src="./image/téléchargement.png" alt="save" class="save" data-id="${data[i].id}">
+                    <a href="${data[i].data.url}" target="_blank"><img src="./image/vue.png" alt="vue"></a>
+                    <img src="./image/dlt.png" alt="dlt" class="delete" data-id="${data[i].id}">
                 </div>
         </li>`}
     }
@@ -25,13 +25,17 @@ function callPdf(data){
 }
 
 
+
+// --------------DELETE --------------
 document.querySelector("body").addEventListener("click",(e)=>{
     if(e.target.className == "delete"){ 
-    var raw = "";
-
+    let myHeaders = new Headers();
+    myHeaders = {...myHeaders, Authorization:`${localStorage.getItem("token")}`}
+    
     var requestOptions = {
       method: 'DELETE',
-      body: raw,
+      headers:  myHeaders,
+     
       redirect: 'follow'
     };
     
@@ -41,8 +45,11 @@ document.querySelector("body").addEventListener("click",(e)=>{
       .catch(error => console.log('error', error));}
 })
 
+
+// --------------UPDATE --------------
 document.querySelector("body").addEventListener("click",(e)=>{
     if(e.target.className == "save"){ 
+    let myHeaders = new Headers();
     var raw = "";
       
     var raw = JSON.stringify({
@@ -53,6 +60,7 @@ document.querySelector("body").addEventListener("click",(e)=>{
 
     var requestOptions = {
       method: 'PUT',
+      headers:  {myHeaders , Authorization:`${localStorage.getItem("token")}`},
       body: raw,
       redirect: 'follow'
     };

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, signOut, getIdToken,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 
 
 const firebaseConfig = {
@@ -29,9 +29,13 @@ signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    localStorage.setItem("uid", user.uid);
-    window.location.href = url
-    // ...
+    
+    getToken.then((token) => {
+      localStorage.setItem("uid", user.uid);
+      localStorage.setItem("token", token);
+      document.location.href = url
+    })
+    
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -53,4 +57,17 @@ export function deconnexion(url) {
         // An error happened.
       });
   }
+
+  export const getToken = new Promise((resolve, reject) => {
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        const {
+          currentUser
+        } = auth;
+        const token = await getIdToken(currentUser, true);
+  
+        resolve(token);
+      }
+    });
+  });
 
