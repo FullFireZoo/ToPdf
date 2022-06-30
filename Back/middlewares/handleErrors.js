@@ -10,4 +10,17 @@ function notFound(req, res, next) {
     res.json({message: '🛠 Not Found'})
 }
 
+// class ErrorMaker {
+//     constructor(status, message) {
+//         this.status = status;
+//         this.message = message;
+//     }
+// }
+// if(isSamePassword && userToLogin.email ===  credential.email) {
+//             console.log('We have a winner !');
+//         } else {
+//             throw new errorMaker(401,'Wrong Password or Email') ;
+//         }
+
+
 module.exports = {notFound}
